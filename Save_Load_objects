@@ -1,0 +1,10 @@
+####Save multiple objects to a file
+http://www.sthda.com/english/wiki/saving-data-into-r-data-format-rds-and-rdata
+```
+# Saving on object in RData format
+save(data1, file = "data.RData")
+# Save multiple objects
+save(data1, data2, file = "data.RData")
+# To load the data again
+load("data.RData")
+```
