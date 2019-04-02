@@ -1,0 +1,5 @@
+#### data frame operation
+```
+meth.mat <- x[, numCs.index]/(x[,numCs.index] + x[,numTs.index])
+# out put was data frame
+```
