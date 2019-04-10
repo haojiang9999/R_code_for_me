@@ -2,6 +2,7 @@
 ```
 # CRC10.id is sample name vector
 unlist(lapply(strsplit(CRC10.id,"_"), '[[', 2))
+strsplit(string,split='|', fixed=TRUE)
 ```
 #### 2.Extract the first 2 Characters in a string
 https://stackoverflow.com/questions/38750535/extract-the-first-2-characters-in-a-string
