@@ -20,3 +20,14 @@ toMatch <- c("A1", "A9", "A6")
 matches <- unique (grep(paste(toMatch,collapse="|"), 
                         myfile$Letter, value=TRUE))
 ```
+#### 4.R grep: is there an AND operator?
+https://stackoverflow.com/questions/13187414/r-grep-is-there-an-and-operator
+```
+grepl("(?=.*TPM)(?=.*CRC09)", fileNames, perl = T)
+x <- c("imageUploaded,people.jpg,more,comma,separated,stuff", "imageUploaded", "people.jpg")
+
+grepl("(?=.*imageUploaded)(?=.*people\\.jpg)", x, perl = TRUE)
+#-----
+[1]  TRUE FALSE FALSE
+```
+
