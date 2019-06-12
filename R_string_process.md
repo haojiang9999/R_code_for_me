@@ -30,4 +30,8 @@ grepl("(?=.*imageUploaded)(?=.*people\\.jpg)", x, perl = TRUE)
 #-----
 [1]  TRUE FALSE FALSE
 ```
+#### 5.Replace all specific character in sample names
+```
+rownames(TCGA.sampelType)<- gsub("-",".",TCGA.sampelType$sample)
+```
 
