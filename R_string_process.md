@@ -34,4 +34,9 @@ grepl("(?=.*imageUploaded)(?=.*people\\.jpg)", x, perl = TRUE)
 ```
 rownames(TCGA.sampelType)<- gsub("-",".",TCGA.sampelType$sample)
 ```
+#### 6.Remove part of string after “.”
+https://stackoverflow.com/questions/10617702/remove-part-of-string-after/44547135
+```
+gsub("\\..*","",genelist)
+```
 
