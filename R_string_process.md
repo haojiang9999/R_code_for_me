@@ -2,6 +2,8 @@
 ```
 # CRC10.id is sample name vector
 unlist(lapply(strsplit(CRC10.id,"_"), '[[', 2))
+# Select the last one in the list
+GeneID <- unlist(lapply(strsplit(GeneNames,"_"), tail, 1))
 strsplit(string,split='|', fixed=TRUE)
 ```
 #### 2.Extract the first 2 Characters in a string
