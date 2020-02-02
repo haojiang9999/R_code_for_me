@@ -41,4 +41,9 @@ https://stackoverflow.com/questions/10617702/remove-part-of-string-after/4454713
 ```
 gsub("\\..*","",genelist)
 ```
-
+#### 7.Remove last n characters from every element in the R vector
+https://intellipaat.com/community/15241/how-to-remove-last-n-characters-from-every-element-in-the-r-vector
+```
+# n = 13
+substr(Purity_Ploidy_sampleID,1,nchar(Purity_Ploidy_sampleID)-13)
+```
