@@ -47,3 +47,32 @@ https://intellipaat.com/community/15241/how-to-remove-last-n-characters-from-eve
 # n = 13
 substr(Purity_Ploidy_sampleID,1,nchar(Purity_Ploidy_sampleID)-13)
 ```
+#### 8.Remove all characters after the 3rd occurrence of “-” in each element of a vector
+https://stackoverflow.com/questions/41622326/remove-all-characters-after-the-3rd-occurrence-of-in-each-element-of-a-vecto
+
+https://regex101.com/r/qOZMSZ/2
+
+Details:
+
+^ - start of string
+([^-]*-[^-]*) - Group 1 capturing 0+ chars other than -, - and 0+ chars other than -
+.* - any 0+ chars (in a TRE regex like this, a dot matches line break chars, too.)
+The \\1 (\1) is a backreference to the text captured into Group 1.
+```
+x <- c("aa-bbb-cccc", "aa-vvv-vv", "aa-ddd")
+sub("^([^-]*-[^-]*).*", "\\1", x)
+## => [1] "aa-bbb" "aa-vvv" "aa-ddd"
+```
+#### 9.How to remove last n characters from every element in the R vector
+https://stackoverflow.com/questions/23413331/how-to-remove-last-n-characters-from-every-element-in-the-r-vector
+```
+char_array = c("foo_bar","bar_foo","apple","beer")
+a = data.frame("data"=char_array,"data2"=1:4)
+a$data = substr(a$data,1,nchar(a$data)-3)
+
+data data2
+1 foo_ 1
+2 bar_ 2
+3   ap 3
+4    b 4
+```
