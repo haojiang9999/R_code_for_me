@@ -76,3 +76,7 @@ data data2
 3   ap 3
 4    b 4
 ```
+#### 10.Select characters from n to n
+```
+colnames(RNA_final_mx)<- substr(sampleID, start = 1, stop = 15)
+```
