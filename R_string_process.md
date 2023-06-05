@@ -1,3 +1,15 @@
+### read csv file problem
+https://www.jianshu.com/p/486c6b98f7cb
+```
+# 运行以下代码发现系统设置有误
+Sys.getlocale()
+[1] "LC_COLLATE=Chinese (Simplified)_China.936;LC_CTYPE=English_United States.1252;LC_MONETARY=Chinese (Simplified)_China.936;LC_NUMERIC=C;LC_TIME=Chinese (Simplified)_China.936"
+# 解决方法：
+Sys.setlocale(category = "LC_ALL", locale = "Chinese") # 将本地语言默认为中文
+[1] "LC_COLLATE=Chinese (Simplified)_China.936;LC_CTYPE=Chinese (Simplified)_China.936;LC_MONETARY=Chinese (Simplified)_China.936;LC_NUMERIC=C;LC_TIME=Chinese (Simplified)_China.936"
+```
+
+
 #### 1.seperate string by special character
 ```
 # CRC10.id is sample name vector
